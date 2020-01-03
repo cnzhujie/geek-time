@@ -4,10 +4,10 @@ import requests
 import json
 import os
 import regex as re
-import browsercookie
+import browser-cookie3
 
 mobile_headers = {
-    'Cookie': '----you-cookie---',
+    'Cookie': 'gksskpitn=9b36ebdc-f743-483f-ac2e-1d66b0188b60; _ga=GA1.2.1472070524.1578014217; _gid=GA1.2.658946875.1578014217; LF_ID=1578014221628-5570592-6208959; GCID=7719fef-c1f4597-837ef42-1e7b2b0; GRID=7719fef-c1f4597-837ef42-1e7b2b0; _gat=1; GCESS=BAEEiA8QAAoEAAAAAAkBAQIEAmAPXgMEAmAPXgYEp.Od2AgBAwcE5flvYQsCBAAMAQEFBAAAAAAEBAAvDQA-; Hm_lvt_022f847c4e3acd44d4a2481d9187f1e6=1578014238,1578014253,1578065905,1578065925; Hm_lpvt_022f847c4e3acd44d4a2481d9187f1e6=1578065925; SERVERID=1fa1f330efedec1559b3abbcb6e30f50|1578065926|1578065903',
     'Accept-Language': "zh-cn",
     'Accept-Encoding': "br, gzip, deflate",
     'Content-Type': "application/json",
@@ -32,8 +32,12 @@ audio_url = "https://time.geekbang.org/serv/v1/column/audios"
 # 所有专栏
 all_column_url = "https://time.geekbang.org/serv/v1/columns"
 
+#文章详情
+#{"id":77749,"include_neighbors":true,"is_freelyread":true}
+article_url = "https://time.geekbang.org/serv/v1/article"
+
 # 获取 Chrome cookie
-cj = browsercookie.chrome()
+cj = browser-cookie3.chrome()
 
 JSON_PATH = os.path.join(os.getcwd(), 'json/')
 AUDIO_PATH = os.path.join(os.getcwd(), 'audio/')
